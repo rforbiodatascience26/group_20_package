@@ -1,0 +1,29 @@
+Package: CentralDogma
+Type: Package
+Title: Central Dogma Package - Group 20
+Version: 0.1.0
+Authors@R:
+  c(person(given = "leonor",
+           family = "ribeiro",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s263488@dtu.dk"), 
+    person(given = "Eduardo",
+           family = "Castro",
+           role = "aut",
+           email = "s263517@dtu.dk"),
+    person(given = "Joana",
+           family = "Andrade",
+           role = "aut",
+           email = "s263485@dtu.dk"),
+    person(given = "Maria",
+           family = "Skompri",
+           role = "aut",
+           email = "s263506@dtu.dk"),
+    person(given = "Dimitra",
+           family = "Rigani",
+           role = "aut",
+           email = "s263484@dtu.dk"))
+Description: A Central Dogma Package made by group 20 for the R for Bio Data Science class
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
