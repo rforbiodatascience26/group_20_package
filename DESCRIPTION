@@ -23,10 +23,13 @@ Authors@R:
            family = "Rigani",
            role = "aut",
            email = "s263484@dtu.dk"))
-Description: A Central Dogma Package made by group 20 for the R for Bio Data Science class
+Description: A Central Dogma Package made by group 20 for the R for Bio Data Science class.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Imports: 
+    ggplot2 (>= 3.5.1),
+    stringr (>= 1.5.1)
