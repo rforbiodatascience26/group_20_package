@@ -27,3 +27,6 @@ Description: A Central Dogma Package made by group 20 for the R for Bio Data Sci
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: 
+    R (>= 3.5)
+RoxygenNote: 7.3.2
