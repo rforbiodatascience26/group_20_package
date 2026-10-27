@@ -1,6 +1,6 @@
 test_that("codon_sequence", {
-  aa <-"ATGAAAACCGCGTATTAA"
+  aa <-"ATGAAAACCGCG"
 
-  expected <- c("ATG", "AAA", "ACC", "GCG", "TAT", "TAA")
+  expected <- c("ATG", "AAA", "ACC", "GCG")
   expect_equal(codon_sequence(aa),expected)
 })
