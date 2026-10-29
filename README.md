@@ -10,9 +10,17 @@ course.
 molecular biology
 ($\text{DNA} \rightarrow \text{RNA} \rightarrow \text{Protein}$).
 
-The package allows you to: - Generate random DNA sequences - Transcribe
-DNA into RNA - Split sequences into codons - Translate RNA into amino
-acids - Plot the frequency of each amino acid in a sequence
+The package allows you to:
+
+- Generate random DNA sequences
+
+- Transcribe DNA into RNA
+
+- Split sequences into codons
+
+- Translate RNA into amino acids
+
+- Plot the frequency of each amino acid in a sequence
 
 ## Functions
 

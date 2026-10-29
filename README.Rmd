@@ -11,10 +11,15 @@ This package was developed as part of the **R for Bio Data Science 26** course.
 **CentralDogma** is an R package that simulates the central dogma of molecular biology ($\text{DNA} \rightarrow \text{RNA} \rightarrow \text{Protein}$).
 
 The package allows you to:
+
 - Generate random DNA sequences
+
 - Transcribe DNA into RNA
+
 - Split sequences into codons
+
 - Translate RNA into amino acids
+
 - Plot the frequency of each amino acid in a sequence
 
 ## Functions
