@@ -47,29 +47,4 @@ codonSelector(codons = c(1, 2, 3))
 
 ### Function 5 - Amino acid visualization
 
-## 
-
-## 
-
-## Using the functions together
-
-```{r}
-set.seed(42) 
-dna    <- create_random_sequence(60)           # simulate DNA 
-rna    <- transcription(dna)                   # DNA -> RNA 
-codons <- codon_sequence(rna)                  # RNA -> 20 codons 
-aa_seq <- codonSelector(sample(1:64, length(codons), replace = TRUE))  # amino acids
-Plot_aa_counts(aa_seq)                         # visualise composition
-```
-
-## Design choices (Task 3)
-
-*Dependencies.*
-
-The package imports **ggplot2** and **stringr**, both added with `usethis::use_package()`, which lists them under `Imports` in `DESCRIPTION`. We call them as `ggplot2::` and `stringr::` inside `Plot_aa_counts()`. Fewer dependencies mean faster installation, fewer breaking changes, fewer version conflicts, and less maintenance.
-
-*`@importFrom` vs `package::function()`.* Both require the package in `Imports`. `@importFrom pkg fun` writes an entry to `NAMESPACE` so `function()` can be called without a prefix; `pkg::function()` needs no entry, shows where each function comes from, and avoids name clashes.
-
-## Use cases and future functions
-
-**CentralDogma** suits teaching, quick demonstrations of the central dogma, and generating data for testing pipelines. Natural extensions: a true translation function from codon strings to amino acids (bridging `codon_sequence()` and `codonSelector()`), reverse complement, GC content, start/stop codon, and consistent function naming.
+The function plot_aa_counts() takes an amino acid sequence written in one-letter code and returns a bar plot showing how many times each amino acid occurs in the sequence. This gives a quick overview of the composition of a protein or peptide. The output is a ggplot object, so the plot can be customised further with ggplot2, for example by adding a title or changing the axis labels.
