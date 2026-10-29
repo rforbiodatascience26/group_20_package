@@ -18,15 +18,32 @@ knitr::opts_chunk$set(
 library(CentralDogma)
 ```
 
+## What is CentralDogma?
+
+CentralDogma is a small package that follows the central dogma of molecular biology (DNA → RNA → protein). It lets you simulate a DNA sequence, convert it to RNA, split a sequence into codons, look up amino acids in the standard genetic code (the built-in dataset `codonList`, 64 codons), and plot how often each amino acid occurs.
+
+```{r, eval = FALSE}
+#install.packages("devtools") 
+devtools::install_github("rforbiodatascience26/group_20_package")
+```
+
 ## Functions
 
 ### Function 1 - DNA sequence generation
 
 ### Function 2 - DNA transcription
 
+The `transcription()` function represents the transcription step of the central dogma of molecular biology. It takes a DNA sequence as input and converts it into an RNA sequence by replacing every thymine base (`T`) with uracil (`U`). The other bases remain unchanged.
+
 ### Function 3 - Codon generation
 
 ### Function 4 - Translation to amino acids
+
+**`codonSelector(codons)`** takes integers (positions 1–64 in `codonList`) and returns the matching amino acids as one string.
+
+```{r}
+codonSelector(codons = c(1, 2, 3))
+```
 
 ### Function 5 - Amino acid visualization
 
