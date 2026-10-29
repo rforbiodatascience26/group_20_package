@@ -30,4 +30,4 @@ library(CentralDogma)
 
 ### Function 5 - Amino acid visualization
 
-## 
+The function plot_aa_counts() takes an amino acid sequence written in one-letter code and returns a bar plot showing how many times each amino acid occurs in the sequence. This gives a quick overview of the composition of a protein or peptide. The output is a ggplot object, so the plot can be customised further with ggplot2, for example by adding a title or changing the axis labels.
