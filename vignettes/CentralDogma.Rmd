@@ -26,6 +26,13 @@ library(CentralDogma)
 
 The `transcription()` function represents the transcription step of the central dogma of molecular biology. It takes a DNA sequence as input and converts it into an RNA sequence by replacing every thymine base (`T`) with uracil (`U`). The other bases remain unchanged.
 
+```{r}
+dna_sequence <- "ATGC"
+rna_sequence <- transcription(dna_sequence)
+
+rna_sequence
+```
+
 ### Function 3 - Codon generation
 
 ### Function 4 - Translation to amino acids
