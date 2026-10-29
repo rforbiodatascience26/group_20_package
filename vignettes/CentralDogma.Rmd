@@ -26,6 +26,15 @@ library(CentralDogma)
 
 ### Function 3 - Codon generation
 
+The `codon_sequence()` function takes the RNA sequence as a single string and splits it into a vector of codons.
+
+```{r}
+rna_sequence -> "UCUAGAUCCCGA"
+c_sequence -> codon_sequence(rna_sequence)
+
+c_sequence
+```
+
 ### Function 4 - Translation to amino acids
 
 ### Function 5 - Amino acid visualization
