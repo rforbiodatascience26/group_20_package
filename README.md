@@ -11,13 +11,13 @@ molecular biology
 ($\text{DNA} \rightarrow \text{RNA} \rightarrow \text{Protein}$).
 
 The package allows you to: - Generate random DNA sequences - Transcribe
-DNA into RNA - Split sequences into codons - Translation to amino
+DNA into RNA - Split sequences into codons - Translate RNA into amino
 acids - Plot the frequency of each amino acid in a sequence
 
 ## Functions
 
-The package has **5 functions** designed to follow the Central Dogma of
-biology.
+The package features **5 functions** designed to follow the Central
+Dogma of Biology.
 
 ## Vignette
 
