@@ -1,6 +1,6 @@
 test_that("codon_sequence", {
-  aa <-"ATGAAAACCGCG"
+  rna <-"AUGAAAACCGCG"
 
-  expected <- c("ATG", "AAA", "ACC", "GCG")
-  expect_equal(codon_sequence(aa),expected)
+  expected <- c("AUG", "AAA", "ACC", "GCG")
+  expect_equal(codon_sequence(rna),expected)
 })

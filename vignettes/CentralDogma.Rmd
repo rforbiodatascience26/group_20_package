@@ -52,6 +52,15 @@ rna_sequence
 
 ### Function 3 - Codon generation
 
+The `codon_sequence()` function takes the RNA sequence as a single string and splits it into a vector of codons.
+
+```{r}
+rna_sequence -> "UCUAGAUCCCGA"
+c_sequence -> codon_sequence(rna_sequence)
+
+c_sequence
+```
+
 ### Function 4 - Translation to amino acids
 
 **`codonSelector(codons)`** takes integers (positions 1–64 in `codonList`) and returns the matching amino acids as one string.
