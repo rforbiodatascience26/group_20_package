@@ -2,56 +2,20 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
-
 # CentralDogma
 
-<!-- badges: start -->
+This package was developed as part of the **R for Bio Data Science 26** course.
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+## What is CentralDogma?
 
-<!-- badges: end -->
+**CentralDogma** is an R package that simulates the central dogma of molecular biology ($\text{DNA} \rightarrow \text{RNA} \rightarrow \text{Protein}$).
 
-The goal of CentralDogma is to ...
+The package allows you to: - Generate random DNA sequences - Transcribe DNA into RNA - Split sequences into codons - Translation to amino acids - Plot the frequency of each amino acid in a sequence
 
-## Installation
+## Functions
 
-You can install the development version of CentralDogma like so:
+The package has **5 functions** designed to follow the Central Dogma of biology.
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
+## Vignette
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(CentralDogma)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+For a step-by-step user guide demonstrating how to use each function, check the package vignette.
