@@ -1,0 +1,33 @@
+---
+title: "CentralDogma"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CentralDogma}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CentralDogma)
+```
+
+## Functions
+
+### Function 1 - DNA sequence generation
+
+### Function 2 - DNA transcription
+
+### Function 3 - Codon generation
+
+### Function 4 - Translation to amino acids
+
+### Function 5 - Amino acid visualization
+
+## 
