@@ -33,3 +33,7 @@ RoxygenNote: 7.3.2
 Imports: 
     ggplot2 (>= 3.5.1),
     stringr (>= 1.5.1)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
