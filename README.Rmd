@@ -2,30 +2,95 @@
 output: github_document
 ---
 
-# CentralDogma
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
-This package was developed as part of the **R for Bio Data Science 26** course.
+```{r setup}
+library(CentralDogma)
+```
 
 ## What is CentralDogma?
 
-**CentralDogma** is an R package that simulates the central dogma of molecular biology ($\text{DNA} \rightarrow \text{RNA} \rightarrow \text{Protein}$).
+CentralDogma is a small package that follows the central dogma of molecular biology (DNA → RNA → protein). It lets you simulate a DNA sequence, convert it to RNA, split a sequence into codons, look up amino acids in the standard genetic code (the built-in dataset `codonList`, 64 codons), and plot how often each amino acid occurs.
 
-The package allows you to:
+It can be found in <https://github.com/rforbiodatascience26/group_20_package>
 
-- Generate random DNA sequences
-
-- Transcribe DNA into RNA
-
-- Split sequences into codons
-
-- Translate RNA into amino acids
-
-- Plot the frequency of each amino acid in a sequence
+```{r, eval = FALSE}
+#install.packages("devtools") 
+devtools::install_github("rforbiodatascience26/group_20_package")
+```
 
 ## Functions
 
-The package features **5 functions** designed to follow the Central Dogma of Biology.
+### Function 1 - DNA sequence generation
 
-## Vignette
+The `create_random_sequence()` function generates a synthetic DNA string of a specified length using the nucleotides A, T, G, and C.
 
-For a step-by-step user guide demonstrating how to use each function, check the package vignette.
+```{r}
+# Generate a random 15-nucleotide DNA sequence
+dna_seq <- create_random_sequence(size = 15)
+dna_seq
+```
+
+### Function 2 - DNA transcription
+
+The `transcription()` function represents the transcription step of the central dogma of molecular biology. It takes a DNA sequence as input and converts it into an RNA sequence by replacing every thymine base (`T`) with uracil (`U`). The other bases remain unchanged.
+
+```{r}
+dna_sequence <- "ATGC"
+rna_sequence <- transcription(dna_sequence)
+
+rna_sequence
+```
+
+### Function 3 - Codon generation
+
+The `codon_sequence()` function takes the RNA sequence as a single string and splits it into a vector of codons.
+
+```{r}
+rna_sequence -> "UCUAGAUCCCGA"
+codon_sequence(rna_sequence)
+
+```
+
+### Function 4 - Translation to amino acids
+
+**`codonSelector(codons)`** takes integers (positions 1–64 in `codonList`) and returns the matching amino acids as one string.
+
+```{r}
+codonSelector(codons = c(1, 2, 3))
+```
+
+### Function 5 - Amino acid visualization
+
+The function plot_aa_counts() takes an amino acid sequence written in one-letter code and returns a bar plot showing how many times each amino acid occurs in the sequence. This gives a quick overview of the composition of a protein or peptide. The output is a ggplot object, so the plot can be customised further with ggplot2, for example by adding a title or changing the axis labels.
+
+```{r}
+aa_seq <- "MKVLAAGIVALLAKKSTEE"
+
+Plot_aa_counts(aa_seq)
+```
+
+## Using the functions together
+
+```{r}
+dna    <- create_random_sequence(60)              # simulate DNA 
+rna    <- transcription(dna)                      # DNA -> RNA 
+codons <- codon_sequence(rna)                     # RNA -> 20 codons 
+aa_seq <- codonSelector(sample(1:64, length(codons), replace = TRUE))  # amino acids 
+Plot_aa_counts(aa_seq)                            # visualise composition
+```
+
+## Design choices (Task 3)
+
+*Dependencies.* The package imports **ggplot2** and **stringr**, both added with `usethis::use_package()`, which lists them under `Imports` in `DESCRIPTION`. We call them as `ggplot2::` and `stringr::` inside `Plot_aa_counts()`. Fewer dependencies mean faster installation, fewer upstream breaking changes, fewer version conflicts, and less maintenance.
+
+*`@importFrom` vs `package::function()`.* Both require the package in `Imports`. `@importFrom pkg fun` writes an entry to `NAMESPACE` so `fun()` can be called without a prefix; `pkg::fun()` needs no entry, shows where each function comes from and avoids name clashes.
+
+## Use cases and future functions
+
+CentralDogma suits teaching, quick demonstrations of the central dogma, and generating toy data for testing pipelines. Natural extensions: a true translation function from codon strings to amino acids (bridging `codon_sequence()` and `codonSelector()`), reverse complement, GC content, start/stop codon, and consistent function naming.
