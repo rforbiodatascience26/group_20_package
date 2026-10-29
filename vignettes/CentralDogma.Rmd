@@ -22,6 +22,14 @@ library(CentralDogma)
 
 ### Function 1 - DNA sequence generation
 
+The `create_random_sequence()` function generates a synthetic DNA string of a specified length using the nucleotides A, T, G, and C.
+
+```{r}
+# Generate a random 15-nucleotide DNA sequence
+dna_seq <- create_random_sequence(size = 15)
+dna_seq
+```
+
 ### Function 2 - DNA transcription
 
 ### Function 3 - Codon generation
